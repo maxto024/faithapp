@@ -1,0 +1,34 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login Page</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+<ion-list>
+  <ion-card> 
+
+</ion-card>
+
+  <ion-item>
+    <ion-label fixed>Username</ion-label>   
+    <ion-input [(ngModel)]="user.username"  type="text" value=""></ion-input> 
+  </ion-item> 
+  
+  <ion-item>
+    <ion-label fixed>Password</ion-label> 
+    <ion-input [(ngModel)]="user.password" type="password"></ion-input>  
+  </ion-item> <br />
+
+  </ion-list>  <br /> 
+    <button ion-button (click)="connect()" round="true">Login</button>
+    
+    <br />
+
+    <a style="color: blue;" (click)="load()"> <h2>Signup here</h2> </a>
+
+
+</ion-content>
+ 

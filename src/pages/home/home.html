@@ -1,17 +1,65 @@
+<!--
+  Generated template for the Prayer page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
+
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Prayer</ion-title>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+<ion-content >
+ 
+<ion-slides  class="no-padding">
+ <ion-slide *ngFor="let prayer of Prayers; let i = index;">  
+    
+
+    <ion-card>
+  <ion-card-header>
+    {{prayer.date.readable}}
+  </ion-card-header>
+  <ion-card-content>
+  <ion-list>
+    <button ion-item>
+       Fajri             {{prayer.timings.Fajr}}
+      <ion-icon name="volume-up" item-right *ngIf="reminder.fajri"></ion-icon>
+      <ion-icon name="volume-off" item-right *ngIf="!reminder.fajri"></ion-icon>
+    </button>
+
+    <button ion-item>
+    <ion-icon name="volume-up" item-right *ngIf="reminder.dhuhr"></ion-icon>
+      <ion-icon name="volume-off" item-right *ngIf="!reminder.dhuhr"></ion-icon>
+      Dhuhr    {{prayer.timings.Dhuhr}}
+    </button>
+
+    <button ion-item>
+     <ion-icon name="volume-up" item-right *ngIf="reminder.asr"></ion-icon>
+      <ion-icon name="volume-off" item-right *ngIf="!reminder.asr"></ion-icon>
+      Asr    {{prayer.timings.Asr}}
+    </button>
+
+    <button ion-item>
+       <ion-icon name="volume-up" item-right *ngIf="reminder.maghrib"></ion-icon>
+      <ion-icon name="volume-off" item-right *ngIf="!reminder.maghrib"></ion-icon>
+      Maghrib   {{prayer.timings.Maghrib}}
+    </button>
+
+    <button ion-item>
+       <ion-icon name="volume-up" item-right *ngIf="reminder.isha"></ion-icon>
+      <ion-icon name="volume-off" item-right *ngIf="!reminder.isha"></ion-icon>
+      Isha    {{prayer.timings.Isha}}
+    </button>
+
+  </ion-list>
+  </ion-card-content>
+</ion-card>
+ </ion-slide>
+
+</ion-slides>
+
 </ion-content>
