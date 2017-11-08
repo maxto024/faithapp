@@ -7,49 +7,49 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Prayer</ion-title>
+    <ion-title>Prayer(Salah)</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content >
+<ion-content class="backgr" >
  
 <ion-slides  class="no-padding">
  <ion-slide *ngFor="let prayer of Prayers; let i = index;">  
     
 
-    <ion-card>
-  <ion-card-header>
+    <ion-card class="tran">
+  <ion-card-header class="tran ">
     {{prayer.date.readable}}
   </ion-card-header>
-  <ion-card-content>
-  <ion-list>
-    <button ion-item>
+  <ion-card-content class="tran ">
+  <ion-list class="tran">
+    <button  class="tran" ion-item>
        Fajri             {{prayer.timings.Fajr}}
       <ion-icon name="volume-up" item-right *ngIf="reminder.fajri"></ion-icon>
       <ion-icon name="volume-off" item-right *ngIf="!reminder.fajri"></ion-icon>
     </button>
 
-    <button ion-item>
+    <button class="tran" ion-item>
     <ion-icon name="volume-up" item-right *ngIf="reminder.dhuhr"></ion-icon>
       <ion-icon name="volume-off" item-right *ngIf="!reminder.dhuhr"></ion-icon>
       Dhuhr    {{prayer.timings.Dhuhr}}
     </button>
 
-    <button ion-item>
+    <button class="tran" ion-item>
      <ion-icon name="volume-up" item-right *ngIf="reminder.asr"></ion-icon>
       <ion-icon name="volume-off" item-right *ngIf="!reminder.asr"></ion-icon>
       Asr    {{prayer.timings.Asr}}
     </button>
 
-    <button ion-item>
+    <button class="tran" ion-item>
        <ion-icon name="volume-up" item-right *ngIf="reminder.maghrib"></ion-icon>
       <ion-icon name="volume-off" item-right *ngIf="!reminder.maghrib"></ion-icon>
       Maghrib   {{prayer.timings.Maghrib}}
     </button>
 
-    <button ion-item>
+    <button  class="tran" ion-item>
        <ion-icon name="volume-up" item-right *ngIf="reminder.isha"></ion-icon>
       <ion-icon name="volume-off" item-right *ngIf="!reminder.isha"></ion-icon>
       Isha    {{prayer.timings.Isha}}

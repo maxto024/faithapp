@@ -22,7 +22,7 @@ export class SettingsPage{
   }
 
   prayerTime(){
-      this.navCtrl.push(ReminderPage,{
+      this.navCtrl.push('ReminderPage',{
       })
   }
 

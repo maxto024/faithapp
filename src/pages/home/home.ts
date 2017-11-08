@@ -56,7 +56,6 @@ export class HomePage {
 
     
     var d = new Date();
-    console.log(d.getMonth());
 var id= localStorage.getItem('id');
 
    
@@ -74,12 +73,12 @@ var id= localStorage.getItem('id');
     }, error => {
       alert(error);
     });
-         var x = date.getMonth();
+         var x = date.getDate()-1;
+         console.log("the date is "+date.getDate())
     this.getService.getPrayerTime(this.data).then(prayer => {
       console.log(prayer);
       this.Prayers = prayer.data;
-   
-      console.log(i);
+  
       var a =0;
       for (var i =0; i < prayer.data.length; i++) {
        
@@ -87,8 +86,7 @@ var id= localStorage.getItem('id');
        
         this.Prayers[a] = prayer.data[i];
         a++;
-         //et epoch = new Date(this.Prayers[i].date.readable).getTime()
-         //console.log(epoch);
+      
        }
       }
 

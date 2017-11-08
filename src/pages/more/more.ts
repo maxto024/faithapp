@@ -27,12 +27,22 @@ settings(){
       });
   }
   evaluation(){
-    this.navCtrl.push('EvaluationPage',{
+    this.navCtrl.push('EvaluatePage',{
+      val:"Evaluation"
+    })
+  }
+  masjid(){
+    this.navCtrl.push('MasjidsPage',{
       val:"Evaluation"
     })
   }
   asma_al_husna(){
     this.navCtrl.push('AsmaAlHusnaPage',{
+      val:"asma_al_husna"
+    });
+  }
+  halal(){
+    this.navCtrl.push('HalalPage',{
       val:"asma_al_husna"
     });
   }

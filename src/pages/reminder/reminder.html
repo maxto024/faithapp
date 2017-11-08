@@ -1,18 +1,49 @@
 <!--
-  Generated template for the ReminderPage page.
+  Generated template for the Others page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>reminder</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
-</ion-content>
+  
+    <ion-navbar>
+      <ion-title>Reminder</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+  <ion-list>
+  
+    <ion-item>
+      <ion-label>Fajri</ion-label>
+      <ion-toggle [(ngModel)]="reminder.fajri"></ion-toggle>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Dhuhr</ion-label>
+      <ion-toggle [(ngModel)]="reminder.dhuhr"  ></ion-toggle>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Asr</ion-label>
+      <ion-toggle [(ngModel)]="reminder.asr"></ion-toggle>
+    </ion-item>
+     <ion-item>
+      <ion-label>Maghrib</ion-label>
+      <ion-toggle [(ngModel)]="reminder.maghrib"></ion-toggle>
+    </ion-item>
+     <ion-item>
+      <ion-label>Asr</ion-label>
+      <ion-toggle [(ngModel)]="reminder.isha"></ion-toggle>
+    </ion-item>
+  
+  </ion-list>
+  <br/>
+  <button ion-button  (click)="setReminder()" block>Save</button>
+  
+  
+  </ion-content>
+  

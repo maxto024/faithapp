@@ -1,18 +1,73 @@
 <!--
-  Generated template for the SignupPage page.
+  Generated template for the Register page.
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>signup</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
-</ion-content>
+  
+    <ion-navbar>
+      <ion-title>Register</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+    <div class="row" [hidden]="registred">
+     <ion-list>
+  
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="user.name" placeholder="Fist Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text"  [(ngModel)]="user.username" placeholder="Username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="user.email" placeholder="Email"></ion-input>
+    </ion-item>
+     <ion-item>
+      <ion-input type="password" [(ngModel)]="user.password" placeholder="Password"></ion-input> 
+    </ion-item>
+     <ion-item>
+      <ion-input type="password" [(ngModel)]="user.psswdcheck" placeholder="Conform Password"></ion-input>
+    </ion-item>
+  
+  <ion-item>
+      <ion-label>Select Country</ion-label> 
+      <ion-select [(ngModel)]="user.country">
+        <ion-option *ngFor="let c of countries"  [value]="c.name">{{c.name}}</ion-option>
+      
+      </ion-select>
+    </ion-item>
+  
+  <ion-item>
+      <ion-label>Select City</ion-label> 
+      <ion-select [(ngModel)]="user.city">
+        <ion-option value="Dhaka">Dhaka</ion-option>
+        <ion-option value="Djibouti">Djibouti</ion-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Select TimeZone</ion-label> 
+      <ion-select [(ngModel)]="user.TimeZone">
+        <ion-option value="Africa">Africa</ion-option>
+        <ion-option value="Asia">Asia</ion-option>
+        <ion-option value="Europe">Europe</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list> <br /><br />
+  <button ion-button  (click)="connect()" block>Sign Up</button>
+  
+    </div>
+  
+   
+  
+  
+  
+  
+  
+  </ion-content>
+  

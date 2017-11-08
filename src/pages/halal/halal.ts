@@ -11,10 +11,10 @@ import { nearby, Getservice } from '../../service/app.service'
 */
 @IonicPage()
 @Component({
-  selector: 'page-masjids',
-  templateUrl: 'masjids.html'
+  selector: 'page-halal',
+  templateUrl: 'halal.html'
 })
-export class MasjidsPage implements OnInit {
+export class HalalPage implements OnInit {
 near = new  nearby('','','','','');
 masjids = new Array();
   constructor(
@@ -34,7 +34,7 @@ ngOnInit(){
     this.near.lat = localStorage.getItem('lat');
     this.near.lon = localStorage.getItem('lon');
     this.near.rankby ='distance';
-    this.near.type ='mosque';
+    this.near.type ='halal';
 
     this.getService.nearbyme(this.near)
     .then(res=>{

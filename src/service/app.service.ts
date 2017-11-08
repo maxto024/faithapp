@@ -20,6 +20,7 @@ export class User {
   ) { }
 }
 
+
 export class nearby {
   constructor(
 
@@ -82,9 +83,9 @@ export class Getservice {
     public http: Http
   ) {
 
-    Parse.initialize("final");
-    //  Parse.serverURL = 'https://faithbackend.herokuapp.com/parse'
-  Parse.serverURL = 'http://127.0.0.1:1337/parse'
+    Parse.initialize("final","backend");
+    Parse.serverURL = 'https://faithbackend.herokuapp.com/parse'
+  //Parse.serverURL = 'http://127.0.0.1:1337/parse'
   }
   // this is  setiing location and also the city 
   setLocation(lat, lon) {
@@ -169,6 +170,19 @@ export class Getservice {
         // Execute any logic that should take place if the save fails.
         // error is a Parse.Error with an error code and message.
         return error;
+      }
+    });
+  }
+  EvalationResult(){
+    var query = new Parse.Query("Evaluation");
+     return query.find({
+      success: function(results) {
+     console.log(results);
+     return results;
+
+      },
+      error: function(error) {
+  
       }
     });
   }
