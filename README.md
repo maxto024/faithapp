@@ -11,7 +11,7 @@ using the `ionic start` command below:
 
 ```bash
 $ sudo npm install -g ionic cordova
-$ ionic serve -l
+$ npm install
 ```
 
 Then, to run it, cd into `faithApp` and run:
