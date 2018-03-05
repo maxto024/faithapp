@@ -86,7 +86,7 @@ export class ReminderPage implements OnInit {
       this._getservice.reminderUpdate(this.reminder).then(rem => {
 
 
-        this.navCtrl.push('HomePage', {
+        this.navCtrl.push('TabsPage', {
           val: 'welcome'
         });
 

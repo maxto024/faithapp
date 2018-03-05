@@ -8,6 +8,9 @@ import { LocationTracker } from '../providers/location-tracker';
   templateUrl: 'app.html'
 })
 export class MyApp {
+
+
+
   rootPage:string = "WelcomePage";
 
   constructor(
@@ -19,7 +22,6 @@ export class MyApp {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-           
       console.log(this.locationTracker.timezone())
       this.locationTracker.startTracking();
       statusBar.styleDefault();

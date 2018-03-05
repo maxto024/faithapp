@@ -35,7 +35,7 @@ export class EvaluatePage  implements OnInit{
     console.log(this.evalute);
     this.evalute.id = localStorage.getItem('id');
     this.getservice.setEvalute(this.evalute).then(res=>{
-       this.navCtrl.push('HomePage',{
+       this.navCtrl.push('TabsPage',{
 
        })
     });
